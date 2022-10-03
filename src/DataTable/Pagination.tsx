@@ -8,7 +8,6 @@ import { media, SMALL } from './media';
 import { Direction } from './constants';
 import { PaginationOptions } from './types';
 import { defaultProps } from './defaultProps';
-import AutoRefresh from './AutoRefresh';
 
 const defaultComponentOptions = {
 	rowsPerPageText: 'Rows per page:',
@@ -78,9 +77,6 @@ interface PaginationProps {
 	paginationComponentOptions?: PaginationOptions;
 	autoRefresh?: boolean;
 	autoRefreshFunction?: Function;
-	autoRefreshLabel?: string;
-	isActiveAutoRefresh?: boolean;
-	setIsActiveAutoRefresh?: Function;
 	onChangePage: (page: number) => void;
 	onChangeRowsPerPage: (numRows: number, currentPage: number) => void;
 }
@@ -98,9 +94,6 @@ function Pagination({
 	paginationComponentOptions = defaultProps.paginationComponentOptions,
 	autoRefresh = defaultProps.autoRefresh,
 	autoRefreshFunction = defaultProps.autoRefreshFunction,
-	autoRefreshLabel = defaultProps.autoRefreshLabel,
-	isActiveAutoRefresh =  defaultProps.isActiveAutoRefresh,
-	setIsActiveAutoRefresh = defaultProps.setIsActiveAutoRefresh,
 	onChangeRowsPerPage = defaultProps.onChangeRowsPerPage,
 	onChangePage = defaultProps.onChangePage,
 }: PaginationProps): JSX.Element {
@@ -153,13 +146,7 @@ function Pagination({
 
 	return (
 		<PaginationWrapper className="rdt_Pagination">
-			{autoRefresh && (<AutoRefresh
-				autoRefreshLabel={autoRefreshLabel}
-				isActive={isActiveAutoRefresh}
-				onPress={() => {
-					setIsActiveAutoRefresh(!isActiveAutoRefresh);
-				}}
-			/>)}
+			{autoRefresh && (autoRefreshFunction)}
 			{!options.noRowsPerPage && shouldShow && (
 				<>
 					<RowLabel>{options.rowsPerPageText}</RowLabel>

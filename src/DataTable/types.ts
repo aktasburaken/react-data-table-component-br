@@ -86,6 +86,8 @@ export type TableProps<T> = {
 	paginationServer?: boolean;
 	paginationServerOptions?: PaginationServerOptions;
 	paginationTotalRows?: number;
+	autoRefresh?: boolean;
+	autoRefreshFunction?: Function;
 	persistTableHead?: boolean;
 	pointerOnHover?: boolean;
 	progressComponent?: React.ReactNode;
