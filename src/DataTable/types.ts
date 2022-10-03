@@ -353,6 +353,7 @@ export interface PaginationPageAction {
 	persistSelectedOnPageChange: boolean;
 }
 
+
 export interface PaginationRowsPerPageAction {
 	type: 'CHANGE_ROWS_PER_PAGE';
 	rowsPerPage: number;

@@ -1,6 +1,6 @@
 {
-  "name": "react-data-table-component",
-  "version": "7.5.3",
+  "name": "react-data-table-component-br",
+  "version": "7.5.5",
   "description": "A simple to use declarative react based data table",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -16,7 +16,7 @@
     "tables",
     "react-table",
     "react-data-table",
-    "react-data-table-component"
+    "react-data-table-component-br"
   ],
   "repository": "https://github.com/jbetancur/react-data-table-component",
   "author": "jbetancur",
@@ -101,7 +101,9 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
-    "deepmerge": "^4.2.2"
+    "bootstrap": "^5.2.2",
+    "deepmerge": "^4.2.2",
+    "reactstrap": "^9.1.4"
   },
   "peerDependencies": {
     "react": ">= 16.8.3",

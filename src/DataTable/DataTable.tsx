@@ -111,6 +111,11 @@ function DataTable<T>(props: TableProps<T>): JSX.Element {
 		defaultSortAsc = defaultProps.defaultSortAsc,
 		clearSelectedRows = defaultProps.clearSelectedRows,
 		conditionalRowStyles = defaultProps.conditionalRowStyles,
+		autoRefreshLabel = defaultProps.autoRefreshLabel,
+		autoRefresh = defaultProps.autoRefresh,
+		autoRefreshFunction = defaultProps.autoRefreshFunction,
+		isActiveAutoRefresh = defaultProps.isActiveAutoRefresh,
+		setIsActiveAutoRefresh = defaultProps.setIsActiveAutoRefresh,
 		theme = defaultProps.theme,
 		customStyles = defaultProps.customStyles,
 		direction = defaultProps.direction,
@@ -490,6 +495,11 @@ function DataTable<T>(props: TableProps<T>): JSX.Element {
 						currentPage={currentPage}
 						rowsPerPage={rowsPerPage}
 						direction={direction}
+						autoRefreshLabel={autoRefreshLabel}
+						autoRefresh={autoRefresh}
+						autoRefreshFunction={autoRefreshFunction}
+						isActiveAutoRefresh={isActiveAutoRefresh}
+						setIsActiveAutoRefresh={setIsActiveAutoRefresh}
 						paginationRowsPerPageOptions={paginationRowsPerPageOptions}
 						paginationIconLastPage={paginationIconLastPage}
 						paginationIconFirstPage={paginationIconFirstPage}

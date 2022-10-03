@@ -5,7 +5,7 @@ export default Object.assign(config, {
 	output: [
 		{
 			name: 'ReactDataTable',
-			file: 'dist/react-data-table-component.umd.js',
+			file: 'dist/react-data-table-component-br.umd.js',
 			format: 'umd',
 			globals: {
 				react: 'React',
